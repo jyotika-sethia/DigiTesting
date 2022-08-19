@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
@@ -13,7 +14,7 @@ public class CreateFrolderTest extends BaseClass {
 	LoginPage lp;
 	CreateFolderPage cp;
 	
-	@BeforeClass
+	@BeforeTest
 	public void call()
 	{
 		lp=new LoginPage(driver);

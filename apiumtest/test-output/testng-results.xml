@@ -2,31 +2,58 @@
 <testng-results ignored="0" total="1" passed="0" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-08-16T18:35:55 CDT" name="Default suite" finished-at="2022-08-16T18:36:33 CDT" duration-ms="38378">
+  <suite started-at="2022-08-18T19:40:37 CDT" name="Default suite" finished-at="2022-08-18T19:41:00 CDT" duration-ms="23376">
     <groups>
     </groups>
-    <test started-at="2022-08-16T18:35:55 CDT" name="Default test" finished-at="2022-08-16T18:36:33 CDT" duration-ms="38378">
-      <class name="tests.LoginTest">
-        <test-method is-config="true" signature="page()[pri:0, instance:tests.LoginTest@3012646b]" started-at="2022-08-16T18:35:55 CDT" name="page" finished-at="2022-08-16T18:35:55 CDT" duration-ms="128" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- page -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:tests.LoginTest@3012646b]" started-at="2022-08-16T18:35:55 CDT" name="setup" finished-at="2022-08-16T18:36:31 CDT" duration-ms="36141" status="PASS">
+    <test started-at="2022-08-18T19:40:37 CDT" name="Default test" finished-at="2022-08-18T19:41:00 CDT" duration-ms="23376">
+      <class name="tests.PriceChangeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:tests.PriceChangeTest@2034b64c]" started-at="2022-08-18T19:40:00 CDT" name="setup" finished-at="2022-08-18T19:40:37 CDT" duration-ms="37040" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="login()[pri:0, instance:tests.LoginTest@3012646b]" started-at="2022-08-16T18:36:31 CDT" name="login" finished-at="2022-08-16T18:36:33 CDT" duration-ms="2022" status="FAIL">
-          <exception class="java.lang.NullPointerException">
+        <test-method is-config="true" signature="call()[pri:0, instance:tests.PriceChangeTest@2034b64c]" started-at="2022-08-18T19:40:37 CDT" name="call" finished-at="2022-08-18T19:40:37 CDT" duration-ms="101" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- call -->
+        <test-method signature="priceChange()[pri:0, instance:tests.PriceChangeTest@2034b64c]" started-at="2022-08-18T19:40:37 CDT" name="priceChange" finished-at="2022-08-18T19:41:00 CDT" duration-ms="23133" status="FAIL">
+          <exception class="org.openqa.selenium.NoSuchElementException">
             <message>
-              <![CDATA[Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null]]>
+              <![CDATA[An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-TP2FQ4I', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [f4ea0caa-a729-4444-a9ca-a4cba439239e, findElement {using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.Button[2]}]
+Capabilities {appium:app: C:\Users\sethi\OneDrive\Des..., appium:appActivity: com.liqvd.digibox.ui.MainAc..., appium:appPackage: com.liqvd.digibox.test, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\sethi\OneDrive\Des..., appActivity: com.liqvd.digibox.ui.MainAc..., appPackage: com.liqvd.digibox.test, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Emulator, platformName: android, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: f4ea0caa-a729-4444-a9ca-a4cba439239e]]>
             </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException: Cannot invoke "org.openqa.selenium.SearchContext.findElement(org.openqa.selenium.By)" because "this.searchContext" is null
+              <![CDATA[org.openqa.selenium.NoSuchElementException: An element could not be located on the page using the given search parameters.
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.1.4', revision: '535d840ee2'
+System info: host: 'DESKTOP-TP2FQ4I', ip: '192.168.1.3', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.1'
+Driver info: io.appium.java_client.android.AndroidDriver
+Command: [f4ea0caa-a729-4444-a9ca-a4cba439239e, findElement {using=xpath, value=/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.Button[2]}]
+Capabilities {appium:app: C:\Users\sethi\OneDrive\Des..., appium:appActivity: com.liqvd.digibox.ui.MainAc..., appium:appPackage: com.liqvd.digibox.test, appium:autoGrantPermissions: true, appium:automationName: UiAutomator2, appium:databaseEnabled: false, appium:desired: {app: C:\Users\sethi\OneDrive\Des..., appActivity: com.liqvd.digibox.ui.MainAc..., appPackage: com.liqvd.digibox.test, autoGrantPermissions: true, automationName: UiAutomator2, deviceName: Android Emulator, platformName: android, udid: emulator-5554}, appium:deviceApiLevel: 31, appium:deviceManufacturer: Google, appium:deviceModel: sdk_gphone64_x86_64, appium:deviceName: emulator-5554, appium:deviceScreenDensity: 440, appium:deviceScreenSize: 1080x2220, appium:deviceUDID: emulator-5554, appium:javascriptEnabled: true, appium:locationContextEnabled: false, appium:networkConnectionEnabled: true, appium:pixelRatio: 2.75, appium:platformVersion: 12, appium:statBarHeight: 66, appium:takesScreenshot: true, appium:udid: emulator-5554, appium:viewportRect: {height: 2022, left: 0, top: 66, width: 1080}, appium:warnings: {}, appium:webStorageEnabled: false, platformName: android}
+Session ID: f4ea0caa-a729-4444-a9ca-a4cba439239e
+at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:200)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:133)
+at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)
+at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:184)
+at io.appium.java_client.remote.AppiumCommandExecutor.execute(AppiumCommandExecutor.java:180)
+at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:567)
+at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:162)
+at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:60)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:385)
+at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:377)
 at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:70)
 at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:39)
-at jdk.proxy2/jdk.proxy2.$Proxy12.click(Unknown Source)
-at pages.LoginPage.loginDetail(LoginPage.java:57)
-at tests.LoginTest.login(LoginTest.java:21)
+at jdk.proxy2/jdk.proxy2.$Proxy16.click(Unknown Source)
+at pages.PriceChangePage.createAccDetail(PriceChangePage.java:67)
+at tests.PriceChangeTest.priceChange(PriceChangeTest.java:25)
 at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104)
 at java.base/java.lang.reflect.Method.invoke(Method.java:577)
 at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
@@ -55,15 +82,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- org.openqa.selenium.NoSuchElementException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- login -->
-        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.LoginTest@3012646b]" started-at="2022-08-16T18:36:33 CDT" name="teardown" finished-at="2022-08-16T18:36:33 CDT" duration-ms="1" status="PASS">
+        </test-method> <!-- priceChange -->
+        <test-method is-config="true" signature="teardown()[pri:0, instance:tests.PriceChangeTest@2034b64c]" started-at="2022-08-18T19:41:01 CDT" name="teardown" finished-at="2022-08-18T19:41:01 CDT" duration-ms="1" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- teardown -->
-      </class> <!-- tests.LoginTest -->
+      </class> <!-- tests.PriceChangeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

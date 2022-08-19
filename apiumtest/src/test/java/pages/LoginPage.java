@@ -50,9 +50,9 @@ public class LoginPage  {
 
 
 	public void loginDetail(String arg1,String arg2,String arg3) throws InterruptedException
-	{
+	{	
 //		allow.click();
-		Thread.sleep(2000);
+		Thread.sleep(4000);
 		System.out.println("2");
 		clicknext1.click();
 		System.out.println("3");

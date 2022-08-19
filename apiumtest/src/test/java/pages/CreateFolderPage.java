@@ -50,6 +50,7 @@ public class CreateFolderPage {
 	
 	public void CFolder(String arg) throws InterruptedException
 	{
+		Thread.sleep(5000);
 		add.click();
 		Thread.sleep(2000);
 		selectFolder.click();

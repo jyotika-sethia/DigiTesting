@@ -42,6 +42,7 @@ public class UploadImagePage {
 		add.click();
 		Thread.sleep(2000);
 		upFile.click();
+		Thread.sleep(3000);
 		option1.click();
 		Thread.sleep(2000);
 		image.click();

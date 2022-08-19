@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
@@ -12,7 +13,7 @@ public class UploadImageTest extends BaseClass{
 	UploadImagePage image;
 	LoginPage lp;
 	
-	@BeforeClass
+	@BeforeTest
 	public void addFile()
 	{
 		lp=new LoginPage(driver);

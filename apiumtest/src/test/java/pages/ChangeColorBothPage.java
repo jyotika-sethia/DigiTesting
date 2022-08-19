@@ -24,7 +24,7 @@ AppiumDriver driver;
 	@FindBy(how=How.ID,using ="com.liqvd.digibox.test:id/textView10")
 	WebElement cchange;
 	
-	@FindBy(how=How.XPATH,using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[7]/android.view.View")
+	@FindBy(how=How.XPATH,using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.view.ViewGroup/androidx.recyclerview.widget.RecyclerView/android.view.ViewGroup[12]/android.view.View")
 	WebElement choosecolor;
 	
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnApply")

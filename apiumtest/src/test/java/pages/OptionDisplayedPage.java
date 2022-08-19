@@ -38,13 +38,17 @@ public class OptionDisplayedPage {
 	{
 		selectAll.click();
 		Thread.sleep(2000);
+	
+	}
+	public boolean displayed() throws InterruptedException 
+	{
 		move.isEnabled();
 		Thread.sleep(2000);
 		download.isEnabled();
 		Thread.sleep(2000);
 		delete.isEnabled();
 		Thread.sleep(2000);
-		share.isEnabled();
+		return share.isEnabled();
 	}
 
 }

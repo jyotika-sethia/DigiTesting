@@ -12,12 +12,15 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.remote.CapabilityType;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import io.appium.java_client.AppiumDriver;
+import io.appium.java_client.android.AndroidDriver;
 import io.appium.java_client.remote.MobileCapabilityType;
 
 
@@ -27,7 +30,7 @@ public class BaseClass {
 	 public static AppiumDriver driver;
 
 	 
-	@BeforeClass
+	@BeforeSuite
 	public void setup() throws MalformedURLException, InterruptedException
 	{
 //		DesiredCapabilities cap = new DesiredCapabilities();
@@ -43,26 +46,29 @@ public class BaseClass {
 //		cap.setCapability(MobileCapabilityType.APP,"");
 //		cap.setCapability(, null);
 //		
-		File path=new File("C:\\Users\\sethi\\git\\DigiBoxx\\apiumtest\\src\\test\\resources\\digiboxx.apk");
-		
-		String path1 = System.getProperty("user.dir");
-		System.out.println(path1);//from where the project will start
-		System.out.println(path);//where u want to start
+//		File path=new File("C:\\Users\\sethi\\git\\DigiBoxx\\apiumtest\\src\\test\\resources\\digiboxx.apk");
+//		
+//		String path1 = System.getProperty("user.dir");
+//		System.out.println(path1);//from where the project will start
+//		System.out.println(path);//where u want to start
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		cap.setCapability(MobileCapabilityType.APP,path.getAbsolutePath());
+		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\sethi\\OneDrive\\Desktop\\L2 project\\digiboxx.apk");
+		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(CapabilityType.PLATFORM_NAME,"Android");
 		cap.setCapability(MobileCapabilityType.UDID,"emulator-5554");
+		cap.setCapability(MobileCapabilityType.DEVICE_NAME,"Android Emulator");
 		
 		cap.setCapability("appPackage", "com.liqvd.digibox.test");
 		cap.setCapability("appActivity","com.liqvd.digibox.ui.MainActivityNew");
 		
 		cap.setCapability("autoGrantPermissions",true);
 		cap.setCapability(MobileCapabilityType.AUTOMATION_NAME,"UiAutomator2");
+//		cap.capabilities.setCapability("appWaitActivity", appWaitActivityVariable);
 		
 		URL url = new URL("http://127.0.0.1:4723/wd/hub");
-		driver = new AppiumDriver(url,cap);
+		driver = new AndroidDriver(url,cap);
 		Thread.sleep(4000);
 		
 
@@ -85,7 +91,7 @@ public class BaseClass {
 	
 	
 	
-	@AfterClass
+	@AfterSuite
 	public void teardown()
 	{
 		
