@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
@@ -11,7 +12,7 @@ public class DeletePPTest extends BaseClass {
 	UpdatePPPage up;
 	
 	
-	@BeforeClass
+	@BeforeTest
 	public void set()
 	{
 		lp=new LoginPage(driver);

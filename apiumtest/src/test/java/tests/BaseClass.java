@@ -48,13 +48,14 @@ public class BaseClass {
 //		
 //		File path=new File("C:\\Users\\sethi\\git\\DigiBoxx\\apiumtest\\src\\test\\resources\\digiboxx.apk");
 //		
-//		String path1 = System.getProperty("user.dir");
+		String path1 = System.getProperty("user.dir");
+		String path2=File.separator+"src\\test\\resources\\digiboxx.apk";
 //		System.out.println(path1);//from where the project will start
 //		System.out.println(path);//where u want to start
 		
 		DesiredCapabilities cap = new DesiredCapabilities();
 		
-		cap.setCapability(MobileCapabilityType.APP,"C:\\Users\\sethi\\OneDrive\\Desktop\\L2 project\\digiboxx.apk");
+		cap.setCapability(MobileCapabilityType.APP,System.getProperty(path1+path2));
 		cap.setCapability("autoGrantPermissions", true);
 		cap.setCapability(CapabilityType.PLATFORM_NAME,"Android");
 		cap.setCapability(MobileCapabilityType.UDID,"emulator-5554");

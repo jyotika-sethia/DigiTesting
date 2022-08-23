@@ -2,24 +2,26 @@ package tests;
 
 import java.util.concurrent.TimeUnit;
 
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
+import pages.AddTagPage;
 import pages.LoginPage;
 import pages.UploadImagePage;
 
-public class UploadImageTest extends BaseClass{
+public class AddTagTest extends BaseClass{
 	
 	
-	UploadImagePage image;
+
 	LoginPage lp;
+	AddTagPage at;
 	
 	@BeforeTest
 	public void addFile()
 	{
 		lp=new LoginPage(driver);
-		image=new UploadImagePage(driver);
+
+		at= new AddTagPage(driver);
 	}
 
 	@Test
@@ -27,7 +29,9 @@ public class UploadImageTest extends BaseClass{
 	{
 		lp.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-		image.selectImage();
+//		image.selectImage();
+		at.tagName("scenary");
 		
 	}
+
 }

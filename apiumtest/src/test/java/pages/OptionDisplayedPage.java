@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -34,21 +36,37 @@ public class OptionDisplayedPage {
 	WebElement share;
 	
 	
+
+	
+	
+	
+	
+	
+	
+	
 	public void selectAll() throws InterruptedException
 	{
 		selectAll.click();
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 	
 	}
+	
 	public boolean displayed() throws InterruptedException 
 	{
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 		move.isEnabled();
-		Thread.sleep(2000);
+		
 		download.isEnabled();
-		Thread.sleep(2000);
+		
 		delete.isEnabled();
-		Thread.sleep(2000);
+		
 		return share.isEnabled();
 	}
+	
+
+	
+
+	
+	
 
 }

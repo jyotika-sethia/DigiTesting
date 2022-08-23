@@ -1,5 +1,7 @@
 package tests;
 
+import java.util.concurrent.TimeUnit;
+
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
@@ -23,7 +25,7 @@ public class PriceChangeTest extends BaseClass{
 	public void priceChange() throws InterruptedException
 	{
 		pcp.createAccDetail();
-		Thread.sleep(3000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		pcp.planA();
 		Assert.assertEquals("Its 10% discount", "324/yr");
 		Assert.assertEquals("324/yr", "pcp.display()");

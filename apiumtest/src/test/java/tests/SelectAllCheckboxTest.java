@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.LoginPage;
@@ -10,7 +11,7 @@ public class SelectAllCheckboxTest extends BaseClass {
 	LoginPage lp;
 	SelectAllCheckboxPage sc;
 	
-	@BeforeClass
+	@BeforeTest
 	public void call()
 	{
 		lp=new LoginPage(driver);

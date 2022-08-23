@@ -3,47 +3,44 @@ package tests;
 import java.util.concurrent.TimeUnit;
 
 import org.testng.Assert;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.CreateFolderPage;
 import pages.LoginPage;
+import pages.OptionDisplayPage;
 import pages.OptionDisplayedPage;
 
-public class OptionDisplayedTest extends BaseClass{
+public class OptionDisplayTest extends BaseClass{
 	LoginPage login;
-	OptionDisplayedPage od;
+	OptionDisplayPage od;
 	CreateFolderPage cf;
 	
 	@BeforeTest
 	public void page()
 	{
 	 login = new LoginPage(driver);
-	 od= new OptionDisplayedPage(driver);
+	 od= new OptionDisplayPage(driver);
 	 cf = new CreateFolderPage(driver);
 	}
 	
-
-	@Test(priority = 1)
-	public void folder_selection() throws InterruptedException
-	{
+	
+	
+	
+	
+	@Test
+	public void folder_select() throws InterruptedException{
 		
 		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
-//		od.selectAll();
-		login.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
+	    login.loginDetail("intern6", "testing2510935@gmail.com", "Gaurav@123");
 		
-		cf.CFolder("Test123");
+		cf.CFolder("Test12");
 		
-		od.selectAll();
+		od.quickacess();
 		
 		Assert.assertEquals(true, od.displayed());
 		
 		
 	}
-	
-	
-
-
 
 }

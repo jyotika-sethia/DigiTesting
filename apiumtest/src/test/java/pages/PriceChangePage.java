@@ -31,20 +31,20 @@ public class PriceChangePage {
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/create_new_account")
 	WebElement create;
 
-	@FindBy(how=How.XPATH, using ="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[2]/android.view.View/android.widget.Button[2]")
+	@FindBy(how=How.XPATH, using ="//*[@text='Yearly']")
 	WebElement yearlyTab;	
 
 	
-	@FindBy(how=How.XPATH, using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]/android.view.View[1]")
+	@FindBy(how=How.XPATH, using="//*[@text='100 GB']")
 	WebElement plan_A; 
 	
-	@FindBy(how=How.XPATH, using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]/android.view.View[2]")
+	@FindBy(how=How.XPATH, using="//*[@text='500 GB']")
 	WebElement plan_B;
 	
-	@FindBy(how=How.XPATH, using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]/android.view.View[3]")
+	@FindBy(how=How.XPATH, using="//*[@text='1 TB']")
 	WebElement plan_C;
 	
-	@FindBy(how=How.XPATH, using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[6]/android.view.View[2]/android.view.View[4]")
+	@FindBy(how=How.XPATH, using="//*[@text='2 TB']")
 	WebElement plan_D;
 	
 	@FindBy(how=How.XPATH, using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.webkit.WebView/android.webkit.WebView/android.view.View/android.view.View/android.view.View[5]")
@@ -63,11 +63,12 @@ public class PriceChangePage {
 		create.click();
 		
 		System.out.println("3");
-		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		yearlyTab.click();
-		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		System.out.println("4");
+		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		JavascriptExecutor js =(JavascriptExecutor)driver;
-		js.executeScript("window.scrollBy(0,350)","");
+		js.executeScript("window.scrollBy(0,450)","");
 	
 	}
 	
@@ -75,6 +76,7 @@ public class PriceChangePage {
 	{
 		Thread.sleep(3000);
 		plan_A.click();
+		
 		
 	}
 	

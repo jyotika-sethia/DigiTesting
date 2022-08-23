@@ -1,6 +1,7 @@
 package tests;
 
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 import pages.DeletefRecyclePage;
@@ -11,7 +12,7 @@ public class DeletefRecycleTest extends BaseClass {
 	LoginPage lp;
 	DeletefRecyclePage dr;
 	
-	@BeforeClass
+	@BeforeTest
 	public void call()
 	{
 		lp=new LoginPage(driver);
