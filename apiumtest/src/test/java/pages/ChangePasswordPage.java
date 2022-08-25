@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
@@ -25,8 +27,11 @@ public class ChangePasswordPage {
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/llSetting")
 	WebElement setting;
 	
-	@FindBy(how=How.XPATH,using="/hierarchy/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.widget.LinearLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.FrameLayout/android.widget.FrameLayout/android.view.ViewGroup/android.widget.LinearLayout[2]/android.widget.LinearLayout[1]/android.widget.RelativeLayout/android.widget.TextView")
+	@FindBy(how=How.XPATH,using="//*[@text='Settings']")
 	WebElement password;
+
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/next")
+	WebElement next;
 	
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/edtOldPassword")
 	WebElement oldpass;
@@ -35,30 +40,41 @@ public class ChangePasswordPage {
 	WebElement newpass;
 	
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/edtCNewPassword")
-	WebElement changepass;
+	WebElement confirmpass;
 	
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnSubmitSetting")
 	WebElement submit;
-
+	
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnASLogout")
+	WebElement Login_Again;
+	
+	
 	
 	public void change_password(String arg,String arg1,String arg2) throws InterruptedException
 	{
-		Thread.sleep(2000);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		profile.click();
-		Thread.sleep(2000);
+	
 		account.click();
-		Thread.sleep(2000);
+	
 		setting.click();
-		Thread.sleep(2000);
+	
 		password.click();
-		Thread.sleep(2000);
+	
+		next.click();
+	
 		oldpass.sendKeys(arg);
-		Thread.sleep(2000);
+	
 		newpass.sendKeys(arg1);
-		Thread.sleep(2000);
-		changepass.sendKeys(arg2);
-		Thread.sleep(2000);
+	
+		confirmpass.sendKeys(arg2);
+	
 		submit.click();
+	}
+	
+	public void login_again()
+	{
+		Login_Again.click();
 	}
 	
 }

@@ -49,7 +49,7 @@ public class BaseClass {
 //		File path=new File("C:\\Users\\sethi\\git\\DigiBoxx\\apiumtest\\src\\test\\resources\\digiboxx.apk");
 //		
 		String path1 = System.getProperty("user.dir");
-		String path2=File.separator+"src\\test\\resources\\digiboxx.apk";
+		String path2=File.separator+"src\\test\\resources\\app-417-WIPTest-debug (1).apk";
 //		System.out.println(path1);//from where the project will start
 //		System.out.println(path);//where u want to start
 		

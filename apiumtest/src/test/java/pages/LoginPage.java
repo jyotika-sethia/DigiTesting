@@ -1,5 +1,7 @@
 package pages;
 
+import java.util.concurrent.TimeUnit;
+
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -46,31 +48,58 @@ public class LoginPage  {
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnSignIn")
 	WebElement login;
 	
-
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/navigation_bar_item_large_label_view")
+	WebElement home;
 
 
 	public void loginDetail(String arg1,String arg2,String arg3) throws InterruptedException
 	{	
+		
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 //		allow.click();
 		Thread.sleep(4000);
 		System.out.println("2");
 		clicknext1.click();
 		System.out.println("3");
-		Thread.sleep(3000);
+		
 		clicknext2.click();
 		System.out.println("4");
-		Thread.sleep(3000);
+		
 		start.click();
 		System.out.println("5");
-		Thread.sleep(3000);
+		
 		digi.sendKeys(arg1);
 		System.out.println("6");
+		
 		email.sendKeys(arg2);
+		
 		password.sendKeys(arg3);
+		
 		login.click();
 
 	}
 	
+	public  String password()
+	{
+		return password.getText();
+	}
 	
+	public void loginAgainDetail(String arg1,String arg2,String arg3)
+	{
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		digi.sendKeys(arg1);
+	
+		email.sendKeys(arg2);
+		
+		password.sendKeys(arg3);
+		
+		login.click();
+	
+	}
+	
+	public String text()
+	{
+		return home.getText();
+	}
 	
 	}
