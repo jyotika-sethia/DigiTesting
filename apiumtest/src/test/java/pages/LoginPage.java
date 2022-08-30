@@ -33,6 +33,9 @@ public class LoginPage  {
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnNextIntroOne")
 	WebElement clicknext2;
 	
+	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/tvContinueToNext")
+	WebElement continuee;
+	
 	@FindBy(how=How.ID,using="com.liqvd.digibox.test:id/btnNextIntroOne")
 	WebElement start;
 	
@@ -67,6 +70,8 @@ public class LoginPage  {
 		
 		start.click();
 		System.out.println("5");
+		
+		continuee.click();
 		
 		digi.sendKeys(arg1);
 		System.out.println("6");
